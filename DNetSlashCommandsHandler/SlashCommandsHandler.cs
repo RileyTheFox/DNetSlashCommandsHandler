@@ -20,7 +20,6 @@ namespace DNetSlashCommandsHandler
         {
             List<ISlashCommandHandler> commands = new();
 
-            XConsole.WriteLogLine(Assembly.GetCallingAssembly().GetName().Name);
             Assembly.GetCallingAssembly().GetTypes()
                 .Where(t =>
                 {
