@@ -35,8 +35,9 @@ namespace DNetSlashCommandsHandler.Commands
         /// This should be defined async in the class implementation.
         /// </summary>
         /// <param name="command">The command that was executed in the Interaction.</param>
+        /// <param name="client">The DiscordSocketClient for this Bot.</param>
         /// <returns>A Task.</returns>
-        public Task Handle(SocketSlashCommand command);
+        public Task Handle(SocketSlashCommand command, DiscordSocketClient client);
 
     }
 }
