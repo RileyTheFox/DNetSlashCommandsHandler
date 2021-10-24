@@ -20,7 +20,8 @@ namespace DNetSlashCommandsHandler
         {
             List<ISlashCommandHandler> commands = new();
 
-            Assembly.GetExecutingAssembly().GetTypes()
+            XConsole.WriteLogLine(Assembly.GetCallingAssembly().GetName().Name);
+            Assembly.GetCallingAssembly().GetTypes()
                 .Where(t =>
                 {
                     Type cmdHnd = typeof(ISlashCommandHandler);
